@@ -1,3 +1,3 @@
 TODO: Task 1 - Write the mongo import command here
-mongoimport --uri "mongodb://mongo:iIwISCpeyvzIGVK6mzpi@containers-us-west-189.railway.app:7068/?authSource=admin&retryWrites=true&w=majority" --db=restoDB -crestaurants  --jsonArray ".\restaurants.json"
+mongoimport --uri "mongodb://${user}:${password}@containers-us-west-189.railway.app:7068/?authSource=admin&retryWrites=true&w=majority" --db=restoDB -crestaurants  --jsonArray ".\restaurants.json"
 mongoimport -hlocalhost --port=27017 -drestoDB -crestaurants --jsonArray "./restaurants.json"
