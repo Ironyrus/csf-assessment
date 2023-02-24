@@ -1,0 +1,11 @@
+<p>restaurant-cuisine works!</p>
+
+<p>Cuisine Selected: {{data}}</p>
+
+<div *ngFor="let cuisine of cuisine" style="cursor:pointer; border: solid 1px red; margin: 1px" (click)="onSubmit(cuisine)">
+    <a 
+    type="button" 
+
+    >{{cuisine.name}}</a>
+</div>
+<button routerLink="">Back</button>

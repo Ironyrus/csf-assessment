@@ -1,0 +1,41 @@
+<p>Name: {{model.name}}</p>
+<p>Cuisine: {{model.cuisine}}</p>
+<p>Address: {{model.address}}</p>
+<img src="{{mapUrl}}">
+<h2>Comment</h2>
+
+<form [formGroup]="restaurantForm" (ngSubmit)="onSubmit()">
+    <table>
+        <tr>
+            <td><label>Name: </label></td>
+            <td>
+                <input type="text" formControlName="name">
+            </td>
+        </tr>
+        <tr>
+            <td><label>Rating: </label></td>
+            <td>
+                <select id="cars" formControlName="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <textarea formControlName="comment"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button routerLink="">Back</button>
+            </td>
+            <td>
+                <button type="submit" [disabled]="!restaurantForm.valid">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
